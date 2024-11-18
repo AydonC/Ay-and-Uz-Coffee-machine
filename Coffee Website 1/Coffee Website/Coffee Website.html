@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title>Ay and Uz Coffee Website</title>
+        <link rel="icon" href= 'coffee.png' type="image/x-icon"
+        />
+        <style>
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-image: url('coffeeBanner.jpg');
+                background-size: cover;
+                background-position: center;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+            body{
+                background-image: url('image.jpg');
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+
+
+            }
+
+            
+         li{
+            float: right;
+         }
+         li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+         background-color: #111;
+        }
+
+        </style>
+    </head>
+    <body>
+        
+        <ul>
+            <li><a href="#home">Introduction</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#screen">Gallery</a></li>
+            <li><a href="#code">Source Code</a></li>
+        </ul>
+
+        <div style="background-color: rgba(12, 12, 12, 0.7);">
+        <section id="home">
+            <h1 style="font-family:Bradley Hand ITC; text-align: center; text-shadow: 2px 2px 5px saddlebrown; color: wheat;";>Welcome To Aydon and Uzair's Coffee Website!</h1>
+            <p style="text-align: center; font-family:freestyle script; font-size: 24px; color: wheat;">a Cup of Coffee a day takes the stress away</p>
+        </section>
+        </div>
+
+        <div style="background-color: rgba(12, 12, 12, 0.7);">
+        <section id="about">
+            <h2 style="font-family: Tahoma; text-align: center;text-shadow: 2px 2px 5px saddlebrown; color: wheat;">ABOUT THIS PROJECT</h2>
+            <pre style="text-align: center; color: wheat;">
+            
+ 
+*Code Overview*
+
+Ay and Uz's Coffee Machine is a simple console application that allows users to order coffee, 
+view previous orders, and exit. The code is organized into a single class called Program with 
+several methods, each responsible for a specific task.
+
+*Authentication Method*
+
+The Authentication method is the first point of entry for the user. It checks if the user knows
+the secret password (hardcoded for now). If they do, it unlocks the menu! This method is quite 
+simple and could be improved by using a more secure approach, like hashing and salting passwords.
+
+*Menu Method*
+
+The Menu method shows the main menu options: order coffee, view previous orders, or exit. It's 
+like a menu board at a real coffee shop! This method is straightforward and could be improved by
+adding more options or submenus.
+
+*OrderCoffee Method*
+
+The OrderCoffee method takes the user's coffee order (type and size) and calculates the price. It's
+like placing an order at the counter! This method is a bit longer, but it's still relatively simple.
+It could be improved by adding more options, like flavorings or creamers.
+
+*Size Method*
+
+The Size method asks for the size preference (small, medium, or large) and adjusts the price. Like 
+choosing a cup size! This method is similar to OrderCoffee and could be improved in the same ways.
+
+*Restart Method*
+
+The Restart method lets the user order again or exit the app. Like starting a new order or leaving 
+the coffee shop! This method is simple and could be improved by adding a confirmation prompt before exiting.
+
+*PreviousOrders Method*
+
+The PreviousOrders method shows all previous orders made. Like looking at past receipts! This method
+is straightforward and could be improved by adding more details, like order dates and totals.
+
+*ReturnToMenu Method*
+
+The ReturnToMenu method takes the user back to the main menu. Like returning to the menu board! This
+method is simple and could be improved by adding a confirmation prompt before returning to the menu.
+
+*Code Insights*
+
+The code uses some simple techniques to get the job done, but there's room for improvement. For example:
+
+*Security*
+
+- The authentication method is super simple (just a hardcoded password). In a real app, we'd want
+something more secure, like hashing and salting passwords.
+
+*Menu and Order Processing*
+
+- The menu and order processing logic could be improved. Right now, it's pretty straightforward, 
+but we could add more features and flexibility. For example, we could add submenus for different coffee types or sizes.
+
+*Code Reuse*
+
+- There's some repeated code in the methods (like asking for user input). We could simplify that
+by creating a separate method for getting user input.
+
+*Error Handling*
+
+- This application handles errors and input validation well but it can be improved. We'd want to add some checks and balances
+to make sure the app doesn't crash or get confused. For example, we could add try-catch blocks to handle
+exceptions and input validation better to ensure the user enters valid data.
+
+*Modularity and Reusability*
+
+- The code could be more modular and reusable. For example, we could create separate classes for orders, 
+customers, and menu items. This would make the code more scalable and maintainable.
+
+*Object-Oriented Programming*
+
+- The code could use more object-oriented programming principles, like inheritance and
+polymorphism. This would make the code more flexible and reusable.
+    
+            </pre>
+        </section>
+        </div>
+
+        <div style="background-color: rgba(12, 12, 12, 0.7);">
+        <section id="screen">
+            <h1 style="font-family: Tahoma; text-align: center; text-shadow: 2px 2px 5px saddlebrown; color: wheat;">GALLERY</h1>
+            <p style="color: wheat; text-align: center;"></p>
+            <div class="gallery">
+                <img src="username.png" alt="Image 6" width="600" height="400">
+                <img src="Menu.png" alt="Image 1" width="600" height="400">
+                <img src="orderingCoffee.png" alt="Image 2" width="600" height="400">
+                <img src="size.png" alt="Image 3" width="600" height="400">
+                <img src="thankYou.png" alt="Image 4" width="600" height="400">
+                <img src="previous.png" alt="Image 5" width="600" height="400">
+                
+            </div>
+        </section>
+        </div>
+
+        <div style="background-color: rgba(12, 12, 12, 0.7);">
+            <section id="code">
+                <h1 style="font-family: Tahoma; text-align: center; text-shadow: 2px 2px 5px saddlebrown; color: wheat;">Source Code</h1>
+                <h3 style="text-align: center; color: wheat;">Main Method</h3>
+                <p style="text-align: center; color: wheat;">This method runs the first part of the program and is where the variables are displayed</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        using System;
+
+                        namespace AyandUz
+                        {
+                            class Program
+                            {
+                                //Declaring variables
+                                public static string ansSize;
+                                public static string milkS;
+                                public static string ansS;
+                                public static int order;
+                                public static string orderSum;
+                                public static string name;
+                                public static double money;
+                                public static double moneySum;
+                                public static System.Text.StringBuilder builder = new System.Text.StringBuilder(); //this will be used to build a string of orders
+                                static void Main(string[] args)
+                                {
+                                    Authentication();
+                                    Restart();
+                                    Console.ReadKey();
+                        
+                        
+                                }
+                            }
+                        }    
+                    </pre>
+                </div>
+                <br>
+
+                
+                <h3 style="text-align: center; color: wheat;">Authentication Method</h3>
+                <p style="text-align: center; color: wheat;">This method runs the Authentication process where the user has 3 attempts to sign in and if he fails then he will be logged out.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        static void Authentication()
+                        {
+                            string uName = "Sprinter";
+                            string uPassword = "P@ssword123";
+                            Console.WriteLine("Hello enter your username");
+                            string uNameU = Console.ReadLine();
+
+                            Console.WriteLine("Enter Password");
+                            string uPasswordU = Console.ReadLine();
+                            if (uNameU == uName && uPasswordU == uPassword)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"Welcome {uName}!");
+                                Menu();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Credentials are not correct,You have 2 attempts left.");
+                                Console.WriteLine("Hello enter your username");
+                                uNameU = Console.ReadLine();
+
+                                Console.WriteLine("Enter Password");
+                                uPasswordU = Console.ReadLine();
+                                if (uNameU == uName && uPasswordU == uPassword)
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine($"Welcome {uName}!");
+                                    Menu();
+
+                                }
+                                else
+                                {
+
+                                    Console.WriteLine("Credentials are not correct, You have 1 attempt left.");
+                                    Console.WriteLine("Hello enter your username");
+                                    uNameU = Console.ReadLine();
+
+                                    Console.WriteLine("Enter Password");
+                                    uPasswordU = Console.ReadLine();
+                                    if (uNameU == uName && uPasswordU == uPassword)
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine($"Welcome {uName}!");
+                                        Menu();
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Credentials are not correct,Exiting now!");
+                                        System.Environment.Exit(0);
+
+
+                                    }
+                                }
+                            }
+                        }
+
+                    </pre>
+                </div>
+                <h3 style="text-align: center; color: wheat;">Menu Method</h3>
+                <p style="text-align: center; color: wheat;">This method displays the menu where the user can choose if they want to order, view previous orders or log out.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        static void Menu()
+                        {
+                            int menuChoice;
+                            Console.WriteLine("How can we help you today " + "\n1. Order Coffee\n2. View Previous Orders\n3. Logout");
+                            menuChoice = int.Parse(Console.ReadLine());
+                          
+                       
+                            if (menuChoice == 1)
+                            {
+                                OrderCoffee();
+                            }
+                            else if (menuChoice == 2)
+                            {
+                       
+                                PreviousOrders();
+                                Environment.Exit(0);
+                       
+                            }
+                            else if(menuChoice == 3) 
+                            {
+                                Console.WriteLine("Thank you for visiting Ay and Uz's Coffee Machine.");
+                                System.Environment.Exit(0);
+                            }
+                            else
+                            {
+                               Console.Clear();
+                                Console.WriteLine("Please Enter Valid Choice!");
+                                Menu();
+                            }
+                        }
+
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">OrderCoffee Method</h3>
+                <p style="text-align: center; color: wheat;">This method allows the user to choose what they want to get from the different coffee options.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        public static void OrderCoffee() //This method contains the main process of making the coffee
+                        {
+                            Console.WriteLine("What will you be having today?:) (Only enter number)\n1.Latte....................R35,00\n2.Cappuccino................R40,00\n3.Espresso.................R25,00");
+                            int ans = int.Parse(Console.ReadLine());
+                            ansS = ans.ToString();
+                      
+                            if (ans == 1)
+                            {
+                                ansS = "Latte";
+                                money = 35.00;
+                                Console.Clear();
+                                Size();
+                      
+                            }
+                            else if (ans == 2)
+                            {
+                                ansS = "Cappuccino";
+                                money = 40.00;
+                                Console.Clear();
+                                Size();
+                      
+                            }
+                            else if (ans == 3)
+                            {
+                                ansS = "Espresso";
+                                money = 25.00;
+                                Console.Clear();
+                                Size();
+                      
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Please Enter Valid Choice!");
+                                OrderCoffee();
+                            }
+                      
+                           
+                      
+                      
+                            orderSum = $"{ansSize} {ansS}"; // Joining the variables to make it a string
+                        }
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">Size Method</h3>
+                <p style="text-align: center; color: wheat;">This method allows the user to choose what size they want.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        public static void Size()
+                        {
+                            
+                            Console.WriteLine("What size do you want?(Only enter number)\n1.Small\n2.Medium...........+R5\n3.Large.............+R10");
+                            int ans2 = int.Parse(Console.ReadLine());
+                            ansSize = ans2.ToString();
+                      
+                            if (ans2 == 1)
+                            {
+                                ansSize = "Small";
+                      
+                            }
+                            else if (ans2 == 2)
+                            {
+                                ansSize = "Medium";
+                                money = money + 5;
+                            }
+                            else if (ans2 == 3)
+                            {
+                                ansSize = "Large";
+                                money = money + 10;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Please Enter Valid Choice!");
+                                Size();
+                            }
+                      
+                        }// This method allows user to pick size
+                      
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">Restart Method</h3>
+                <p style="text-align: center; color: wheat;">This method allows the user to order again or go back to the menu.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        public static void Restart()
+                        {
+
+                            // allowing the user to order again
+                            while (true)
+                            {
+
+                                order = order + 1; //order number increases after every order
+                                moneySum = moneySum + money;
+                                builder.Append(orderSum + " at " + DateTime.Now + "\n"); //this line will add all the orders to a string so that it can be displayed
+                                Console.WriteLine("Thank you! ,Do you want another order?(Y/N)");
+                                string input = Console.ReadLine().ToLower();
+                                
+                                while (input != "y" && input != "n") 
+                                {
+                                    Console.WriteLine("Please enter valid option!");
+                                    input = Console.ReadLine();
+                                }
+                                
+
+                                if (input == "n") //if user enters no this code will execute and break the loop
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Thank you for ordering at Ay and Uz's Coffee Machine!");
+                                    Console.WriteLine($"Order Details: {order} order(s)\n");
+                                    Console.WriteLine(builder);//displays the orders
+                                    Console.WriteLine($"Your final total will be R{Math.Round(moneySum, 3)}");
+                                    ReturnToMenu();
+                                    
+
+                                }
+                                
+                                Console.Clear();
+                                Console.WriteLine($"Welcome back {name}! ");
+                                OrderCoffee();
+
+
+
+                            }
+                        } // this method allows you to restart the process
+                      
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">Previous Orders Method</h3>
+                <p style="text-align: center; color: wheat;">This method allows the user to view their previous orders.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        public static void PreviousOrders()
+                        {
+                            Console.WriteLine("Previous Orders:");
+                            Console.WriteLine($"Order Details: {order} order(s)\n");
+                            Console.WriteLine(builder);
+                   
+                            
+                        } // allows users to view previous orders
+
+                
+                      
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">ReturnToMenu Method</h3>
+                <p style="text-align: center; color: wheat;">This method allows the user to go back to the main menu.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        public static void ReturnToMenu()
+                        {
+                            Console.WriteLine("Do you want to return to menu?(Y/N)");
+                            char answer1 = char.Parse(Console.ReadLine().ToLower());
+
+
+                            if (answer1 == 'y')
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"Welcome back {name}! ");
+                                Menu();
+
+                            }
+                            else if (answer1 == 'n')
+                            {
+                                Environment.Exit(0);
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Please enter valid choice");
+                                ReturnToMenu();
+
+                            }
+                        } 
+                    </pre>
+                </div>
+
+                <h3 style="text-align: center; color: wheat;">Whole Program</h3>
+                <p style="text-align: center; color: wheat;">This is the full program.</p>
+                <div style="border-style: dashed; color: wheat;" id="code1">
+                    <pre style="overflow-x: auto;">
+                        using Microsoft.VisualBasic.FileIO;
+                        using System;
+
+                        namespace AyandUz
+                        {
+                            class Program
+                            {
+                                //Declaring variables
+                                public static string ansSize;
+                                public static string milkS;
+                                public static string ansS;
+                                public static int order;
+                                public static string orderSum;
+                                public static string name;
+                                public static double money;
+                                public static double moneySum;
+                                public static System.Text.StringBuilder builder = new System.Text.StringBuilder(); //this will be used to build a string of orders
+                                static void Main(string[] args)
+                                {
+                                    Authentication();
+                                    Restart();
+                                    Console.ReadKey();
+
+
+                                }
+                                static void Authentication()
+                                {
+                                    string uName = "Sprinter";
+                                    string uPassword = "P@ssword123";
+                                    Console.WriteLine("Hello enter your username");
+                                    string uNameU = Console.ReadLine();
+
+                                    Console.WriteLine("Enter Password");
+                                    string uPasswordU = Console.ReadLine();
+                                    if (uNameU == uName && uPasswordU == uPassword)
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine($"Welcome {uName}!");
+                                        Menu();
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Credentials are not correct,You have 2 attempts left.");
+                                        Console.WriteLine("Hello enter your username");
+                                        uNameU = Console.ReadLine();
+
+                                        Console.WriteLine("Enter Password");
+                                        uPasswordU = Console.ReadLine();
+                                        if (uNameU == uName && uPasswordU == uPassword)
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine($"Welcome {uName}!");
+                                            Menu();
+
+                                        }
+                                        else
+                                        {
+
+                                            Console.WriteLine("Credentials are not correct, You have 1 attempt left.");
+                                            Console.WriteLine("Hello enter your username");
+                                            uNameU = Console.ReadLine();
+
+                                            Console.WriteLine("Enter Password");
+                                            uPasswordU = Console.ReadLine();
+                                            if (uNameU == uName && uPasswordU == uPassword)
+                                            {
+                                                Console.Clear();
+                                                Console.WriteLine($"Welcome {uName}!");
+                                                Menu();
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("Credentials are not correct,Exiting now!");
+                                                System.Environment.Exit(0);
+
+
+                                            }
+
+
+
+
+                                        }
+
+
+
+                                    }
+
+                                }
+
+                                static void Menu()
+                                {
+                                    int menuChoice;
+                                    Console.WriteLine("How can we help you today " + "\n1. Order Coffee\n2. View Previous Orders\n3. Logout");
+                                    menuChoice = int.Parse(Console.ReadLine());
+                                
+
+                                    if (menuChoice == 1)
+                                    {
+                                        OrderCoffee();
+                                    }
+                                    else if (menuChoice == 2)
+                                    {
+
+                                        PreviousOrders();
+                                        Environment.Exit(0);
+
+                                    }
+                                    else if(menuChoice == 3) 
+                                    {
+                                        Console.WriteLine("Thank you for visiting Ay and Uz's Coffee Machine.");
+                                        System.Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                    Console.Clear();
+                                        Console.WriteLine("Please Enter Valid Choice!");
+                                        Menu();
+                                    }
+
+                                    
+                                    
+
+
+                                }
+                                public static void OrderCoffee() //This method contains the main process of making the coffee
+                                {
+                                    Console.WriteLine("What will you be having today?:) (Only enter number)\n1.Latte....................R35,00\n2.Cappuccino................R40,00\n3.Espresso.................R25,00");
+                                    int ans = int.Parse(Console.ReadLine());
+                                    ansS = ans.ToString();
+
+                                    if (ans == 1)
+                                    {
+                                        ansS = "Latte";
+                                        money = 35.00;
+                                        Console.Clear();
+                                        Size();
+
+                                    }
+                                    else if (ans == 2)
+                                    {
+                                        ansS = "Cappuccino";
+                                        money = 40.00;
+                                        Console.Clear();
+                                        Size();
+
+                                    }
+                                    else if (ans == 3)
+                                    {
+                                        ansS = "Espresso";
+                                        money = 25.00;
+                                        Console.Clear();
+                                        Size();
+
+                                    }
+                                    else
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Please Enter Valid Choice!");
+                                        OrderCoffee();
+                                    }
+
+                                
+
+
+                                    orderSum = $"{ansSize} {ansS}"; // Joining the variables to make it a string
+                                }
+                                public static void Size()
+                                {
+                                    
+                                    Console.WriteLine("What size do you want?(Only enter number)\n1.Small\n2.Medium...........+R5\n3.Large.............+R10");
+                                    int ans2 = int.Parse(Console.ReadLine());
+                                    ansSize = ans2.ToString();
+                            
+                                    if (ans2 == 1)
+                                    {
+                                        ansSize = "Small";
+
+                                    }
+                                    else if (ans2 == 2)
+                                    {
+                                        ansSize = "Medium";
+                                        money = money + 5;
+                                    }
+                                    else if (ans2 == 3)
+                                    {
+                                        ansSize = "Large";
+                                        money = money + 10;
+                                    }
+                                    else
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Please Enter Valid Choice!");
+                                        Size();
+                                    }
+                                
+                                    
+
+
+                                }// This method allows user to pick size
+
+                                public static void Restart()
+                                {
+
+                                    // allowing the user to order again
+                                    while (true)
+                                    {
+
+                                        order = order + 1; //order number increases after every order
+                                        moneySum = moneySum + money;
+                                        builder.Append(orderSum + " at " + DateTime.Now + "\n"); //this line will add all the orders to a string so that it can be displayed
+                                        Console.WriteLine("Thank you! ,Do you want another order?(Y/N)");
+                                        string input = Console.ReadLine().ToLower();
+                                        
+                                        while (input != "y" && input != "n") 
+                                        {
+                                            Console.WriteLine("Please enter valid option!");
+                                            input = Console.ReadLine();
+                                        }
+                                        
+
+                                        if (input == "n") //if user enters no this code will execute and break the loop
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("Thank you for ordering at Ay and Uz's Coffee Machine!");
+                                            Console.WriteLine($"Order Details: {order} order(s)\n");
+                                            Console.WriteLine(builder);//displays the orders
+                                            Console.WriteLine($"Your final total will be R{Math.Round(moneySum, 3)}");
+                                            ReturnToMenu();
+                                        
+
+                                        }
+                                        
+                                        Console.Clear();
+                                        Console.WriteLine($"Welcome back {name}! ");
+                                        OrderCoffee();
+
+
+
+                                    }
+                                } // this method allows you to restart the process
+
+                                public static void PreviousOrders()
+                                    {
+                                        Console.WriteLine("Previous Orders:");
+                                        Console.WriteLine($"Order Details: {order} order(s)\n");
+                                        Console.WriteLine(builder);
+
+                                        
+                                    } // allows users to view previous orders
+                                public static void ReturnToMenu()
+                                {
+                                    Console.WriteLine("Do you want to return to menu?(Y/N)");
+                                    char answer1 = char.Parse(Console.ReadLine().ToLower());
+
+
+                                    if (answer1 == 'y')
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine($"Welcome back {name}! ");
+                                        Menu();
+
+                                    }
+                                    else if (answer1 == 'n')
+                                    {
+                                        Environment.Exit(0);
+                                    }
+                                    else
+                                    {
+                                        Console.Clear();
+                                        Console.WriteLine("Please enter valid choice");
+                                        ReturnToMenu();
+
+                                    }
+                                }
+
+                            }
+                        } 
+
+                    </pre>
+                </div>
+
+            </section>
+        </div>
+        
+    </body>
+</html>
